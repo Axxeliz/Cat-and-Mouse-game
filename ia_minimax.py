@@ -11,14 +11,11 @@ def terminal(state: State) -> bool:
 def shortest_path_length(grid: Grid, start: Pos, goal: Pos) -> int:
     if start == goal:
         return 0
-
     visitados: dict[Pos, int] = {start: 0}
     cola: deque[Pos] = deque([start])
-
     while cola:
         actual = cola.popleft()
         dist_actual = visitados[actual]
-
         for vecino in neighbors(grid, actual):
             if vecino not in visitados:
                 visitados[vecino] = dist_actual + 1

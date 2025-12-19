@@ -8,7 +8,7 @@ def main():
     #  Elegir dificultad
     global DEPTH
     try:
-        nuevo = int(input("Elige dificultad (DEPTH): "))
+        nuevo = int(input("Elige la dificultad (del 1 al 10 o mas): "))
         DEPTH = nuevo
     except:
         print("Dificultad inválida. Usando dificultad estandar.")
